@@ -23,6 +23,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/estiloscruds.css">
   </head>
 <body>    
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -32,15 +33,15 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+          <a class="nav-link active" aria-current="page" href="bienvenida.php">Inicio</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Registrar
           </a>
           <ul class="dropdown-menu">
-          <a href="cruds/crudestudiante/Crud.php" class="btn btn-info">Registrar Estudiantes</a>
-            <li><a class="dropdown-item" href="">Registrar Padres</a></li>
+          <li><a class="dropdown-item" href="cruds/crudestudiante/Crud.php">Registros de Estudiantes</a></li>
+            <li><a class="dropdown-item" href="cruds/crudpadres/CrudDos.php">Registrar Encargados</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -48,9 +49,12 @@
             Registros
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Registros de Estudiantes</a></li>
-            <li><a class="dropdown-item" href="#">Registros de Padres</a></li>
+            <li><a class="dropdown-item" href="cruds/crudestudiante/listado.php">Registros de Estudiantes</a></li>
+            <li><a class="dropdown-item" href="cruds/crudpadres/listado.php">Registros de Encargados</a></li>
           </ul>
+          <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="Bot/bot">ChatBot</a>
+        </li>
       </form>
     </div>
   </div>
