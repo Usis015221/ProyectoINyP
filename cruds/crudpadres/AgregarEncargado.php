@@ -17,7 +17,7 @@
     $resultado = $conexion -> query($sql);
 
     if ($resultado) {
-        header('Location: CrudDos.php');
+        header('Location: NuevoEncargado.php');
     }else {
         echo "No se insertaron los datos";
     }

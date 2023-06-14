@@ -2,10 +2,10 @@
 
     include 'conexion_be.php';
 
-    $nombre_completo = $_POST['nombre_completo'];
-    $correo = $_POST['correo'];
-    $usuario = $_POST['usuario'];
-    $contrasena = $_POST['contrasena'];
+    $nombre_completo = $_POST['add_nombre'];
+    $correo = $_POST['add_email'];
+    $usuario = $_POST['add_usuario'];
+    $contrasena = $_POST['add_password'];
     $contrasena = hash('sha512', $contrasena);
 
     $query = "INSERT INTO usuarios(nombre_completo, correo, usuario, contrasena)
@@ -18,7 +18,7 @@
         echo '
             <script>
                 alert("Este correo ya existe, utiliza otro");
-                window.location = "../index.php";
+                window.location = "../login.php";
             </script>
         ';
         exit();
@@ -30,7 +30,7 @@
         echo '
             <script>
                 alert("Este usuario ya existe, utiliza otro");
-                window.location = "../index.php";
+                window.location = "../login.php";
             </script>
         ';
         exit();
@@ -42,14 +42,14 @@
         echo '
             <script>
                 alert("Usuario Almacenado exitosamente");
-                window.location = "../index.php";
+                window.location = "../login.php";
             </script>
         ';
     }else{
         echo '
             <script>
             alert("Usuario no almacenado");
-            window.location = "../index.php";
+            window.location = "../login.php";
             </script>
         '; 
     }

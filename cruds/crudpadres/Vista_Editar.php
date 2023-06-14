@@ -1,4 +1,20 @@
-<!DOCTYPE html>
+<?php
+
+    session_start();
+
+    if(!isset($_SESSION['usuario'])){
+        echo '
+            <script>
+                alert("Por favor inicia sesión");
+                window.location = "../../index.php";
+            </script>
+        ';
+        session_destroy();
+        die();
+    }
+
+
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -11,6 +27,7 @@
     <link rel="stylesheet" href="../Alert/sweetalert.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <link rel="stylesheet" href="../css/style_cp.css">
+    <link rel="stylesheet" href="../../assets/css/estiloscruds.css">
 </head>
 
 <body>
@@ -57,18 +74,18 @@
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Editar Telefono</label>
-            <input type="text" class="form-control" name="TelefonoE" value="<?php echo $Fila['Telefono']?>">
+            <input type="text" class="form-control" name="telefonoE" value="<?php echo $Fila['telefono']?>">
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">DUI</label>
-            <input type="text" class="form-control" name="DUIE" value="<?php echo $Fila['DUI']?>">
+            <input type="text" class="form-control" name="duiE" value="<?php echo $Fila['dui']?>">
         </div>
 
         <img style="width: 200px;" src="data:image/jpg;base64,<?php echo base64_encode($Fila['foto_encargado'])?>" alt="">
 
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Editar Foto</label>
-            <input type="File" class="form-control" name="foto_encargado">
+            <input type="File" class="form-control" name="foto_encargado" required="required">
         </div>
         <script src="js/push.min.js"></script>
             <script>
@@ -76,7 +93,7 @@
                 Push.Permission.request();
                 Push.create('Editaste datos', {
                 body: 'Los datos del encargado han sido editados y guardados exitosamente',
-                icon: "img/ds.jpg",
+                icon: "img/ap.jpeg",
                 timeout: 1500000,              
                 vibrate: [100, 100, 100],    
                 onClick: function() {
@@ -89,7 +106,7 @@
      }
 </script>
         <button type="submit" class="btn btn-primary" onclick="push();">Guardar Cambios</button>
-        <a href="Crud.php" class="btn btn-info">Regresar</a>
+        <a href="CrudDos.php" class="btn btn-info">Regresar</a>
         </form>
 
 

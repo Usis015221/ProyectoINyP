@@ -1,4 +1,20 @@
-<!DOCTYPE html>
+<?php
+
+    session_start();
+
+    if(!isset($_SESSION['usuario'])){
+        echo '
+            <script>
+                alert("Por favor inicia sesión");
+                window.location = "../../index.php";
+            </script>
+        ';
+        session_destroy();
+        die();
+    }
+
+
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,6 +26,7 @@
     <link rel="stylesheet" href="../Alert/sweetalert.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <link rel="stylesheet" href="../css/style_cp.css">
+    <link rel="stylesheet" href="../../assets/css/estiloscruds.css">
     <title>Modificar Estudiante</title>
 </head>
 
@@ -41,7 +58,7 @@
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Editar Correo</label>
-            <input type="text" class="form-control" name="correoE" value="<?php echo $Fila['correo']?>">
+            <input type="email" class="form-control" name="correoE" value="<?php echo $Fila['correo']?>">
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Editar Usuario</label>
@@ -64,7 +81,7 @@
 
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Editar Foto</label>
-            <input type="File" class="form-control" name="foto_estudiante">
+            <input type="File" class="form-control" name="foto_estudiante" required="required">
         </div>
 
         <script src="js/push.min.js"></script>
@@ -73,7 +90,7 @@
                 Push.Permission.request();
                 Push.create('Editaste datos', {
                 body: 'Los datos del estudiante han sido editados y guardados exitosamente',
-                icon: "img/ds.jpg",
+                icon: "img/ap.jpeg",
                 timeout: 1500000,              
                 vibrate: [100, 100, 100],    
                 onClick: function() {

@@ -4,8 +4,8 @@
 
     include 'conexion_be.php';
 
-    $correo = $_POST['correo'];
-    $contrasena = $_POST['contrasena'];
+    $correo = $_POST['add_email'];
+    $contrasena = $_POST['add_password'];
     $contrasena = hash('sha512', $contrasena);
 
     $validar_login = mysqli_query($conexion, "SELECT * FROM usuarios WHERE
@@ -19,7 +19,7 @@
         echo '
             <script>
                 alert("El correo no existe o la contraseña esta mal escrita, por favor verifique los datos introducidos");
-                window.location = "../index.php";
+                window.location = "../login.php";
             </script>
         ';
         exit;    
