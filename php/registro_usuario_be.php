@@ -1,18 +1,27 @@
 <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $nombre_completo = $_POST["add_nombre"];
+    }
 
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $usuario = $_POST["add_usuario"];
+    }
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $contrasena = $_POST["password"];
+    }
+    
     include 'conexion_be.php';
 
     $nombre_completo = $_POST['add_nombre'];
     $correo = $_POST['add_email'];
     $usuario = $_POST['add_usuario'];
-    $contrasena = $_POST['add_password'];
-    $contrasena = hash('sha512', $contrasena);
+    $contrasena = $_POST['password'];
 
-    $query = "INSERT INTO usuarios(nombre_completo, correo, usuario, contrasena)
+    $query = "INSERT INTO usuarios(nombre_completo, email, usuario, password)
               VALUES('$nombre_completo', '$correo', '$usuario', '$contrasena')";
 
 
-    $verificar_correo = mysqli_query($conexion, "SELECT * FROM usuarios WHERE correo='$correo' ");
+    $verificar_correo = mysqli_query($conexion, "SELECT * FROM usuarios WHERE email='$correo' ");
 
     if(mysqli_num_rows($verificar_correo) > 0){
         echo '

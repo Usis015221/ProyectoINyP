@@ -34,8 +34,33 @@
     <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-    <script src="//code.tidio.co/0sgmlyajwdv2mggigzd3f806aei3y0qw.js" async></script>
-  </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+      body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      }
+  
+      #floating-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
+      text-align: center;
+      cursor: pointer;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      /* Alinea el ícono verticalmente */
+      line-height: 50px;
+      }
+      </style>
+</head>
 
 <body>    
          <div class="header">
@@ -145,6 +170,10 @@
         </div>
 
     </div>
+    <a href="chat/index.php">
+         <!-- Agrega el ícono de mensaje al botón utilizando la clase de FontAwesome -->
+        <button id="floating-button"><i class="fas fa-envelope"></i></button>
+        </a>
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>

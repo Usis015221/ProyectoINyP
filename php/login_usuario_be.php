@@ -6,10 +6,9 @@
 
     $correo = $_POST['add_email'];
     $contrasena = $_POST['add_password'];
-    $contrasena = hash('sha512', $contrasena);
 
     $validar_login = mysqli_query($conexion, "SELECT * FROM usuarios WHERE
-    correo='$correo' and contrasena='$contrasena'");
+    email='$correo' and password ='$contrasena'");
 
     if(mysqli_num_rows($validar_login) > 0){
         $_SESSION['usuario'] = $correo;

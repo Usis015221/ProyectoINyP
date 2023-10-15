@@ -31,7 +31,32 @@
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
       <link rel="stylesheet" href="css/estiloscruds.css">
-    <script src="//code.tidio.co/0sgmlyajwdv2mggigzd3f806aei3y0qw.js" async></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <style>
+      body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      }
+  
+      #floating-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
+      text-align: center;
+      cursor: pointer;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      /* Alinea el ícono verticalmente */
+      line-height: 50px;
+      }
+      </style>
   </head>
 <body>    
          <div class="header">
@@ -58,20 +83,47 @@
                               </li>
                               <li class="nav-item dropdown">
                                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Registrar
+                                    Matemáticas
                                   </a>
                                   <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="cruds/crudestudiante/Crud.php">Registros de Estudiantes</a></li>
-                              <li><a class="dropdown-item" href="cruds/crudpadres/CrudDos.php">Registrar Encargados</a></li>
+                              <li><a class="dropdown-item" href="juegos/matematicas/suma.php">Sumas</a></li>
+                              <li><a class="dropdown-item" href="juegos/matematicas/resta.php">Restas</a></li>
                                   </ul>
                               </li>
                               <li class="nav-item dropdown">
                                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Listados
+                                    Lenguaje
                                   </a>
                                   <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="cruds/crudestudiante/listado.php">Listado de Estudiantes</a></li>
-                              <li><a class="dropdown-item" href="cruds/crudpadres/listado.php">Listado de Encargados</a></li>
+                              <li><a class="dropdown-item" href="juegos/matematicas/suma.php">Sumas</a></li>
+                              <li><a class="dropdown-item" href="juegos/matematicas/resta.php">Restas</a></li>
+                                  </ul>
+                              </li>
+                              <li class="nav-item dropdown">
+                                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Estudios Sociales
+                                  </a>
+                                  <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="juegos/sociales/simbolos/simbolos.php">Simbolos Patrios</a></li>
+                              <li><a class="dropdown-item" href="juegos/sociales/banderas/banderas.php">Banderas</a></li>
+                                  </ul>
+                              </li>
+                              <li class="nav-item dropdown">
+                                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Ciencias
+                                  </a>
+                                  <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="juegos/matematicas/suma.php">Sumas</a></li>
+                              <li><a class="dropdown-item" href="juegos/matematicas/resta.php">Restas</a></li>
+                                  </ul>
+                              </li>
+                              <li class="nav-item dropdown">
+                                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Artistica
+                                  </a>
+                                  <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="juegos/artistica/paint/paint.php">Dibuja</a></li>
+                              <li><a class="dropdown-item" href="juegos/matematicas/resta.php">Restas</a></li>
                                   </ul>
                               </li>
                               <li class="nav-item d_none login_btn">
@@ -149,6 +201,9 @@
                 </div>
             </div>
         </div>
+        <a href="cruds/crudestudiante/chat/index.php">
+        <button id="floating-button"><i class="fas fa-envelope"></i></button>
+        </a>
     </footer>
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>

@@ -26,10 +26,56 @@
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
       <link rel="stylesheet" href="css/estiloscruds.css">
-      <script src="//code.tidio.co/0sgmlyajwdv2mggigzd3f806aei3y0qw.js" async></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+      <style>
+      body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      }
+  
+      #floating-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
+      text-align: center;
+      cursor: pointer;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      /* Alinea el ícono verticalmente */
+      line-height: 50px;
+      }
+       
+    #floating {
+        position: fixed;
+        bottom: 20px;
+        right: 80px; /* Ajusta la posición del segundo botón */
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        text-align: center;
+        cursor: pointer;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        /* Alinea el ícono verticalmente */
+        line-height: 50px;
+        /* Utiliza tu imagen personalizada como fondo */
+        background-image: url('images/perfil.png');
+        background-size: cover; /* Ajusta el tamaño de la imagen */
+    }
+      </style>
    </head>
    <!-- body -->
    <body class="main-layout position_head">
@@ -151,6 +197,14 @@
                </div>
             </div>
          </div>
+         <a href="chat/index.php">
+         <!-- Agrega el ícono de mensaje al botón utilizando la clase de FontAwesome -->
+        <button id="floating-button"><i class="fas fa-envelope"></i></button>
+        </a>
+        <a href="chatbot/index.php">
+        <!-- Agrega el ícono de mensaje al botón utilizando la clase de FontAwesome -->
+        <button id="floating"></i></button>
+        </a>
       </footer>
       <!-- end footer -->
       <!-- Javascript files-->
