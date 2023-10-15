@@ -1,24 +1,33 @@
 <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $nombre_completo = $_POST["add_nombre"];
+    }
 
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $usuario = $_POST["add_usuario"];
+    }
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $contrasena = $_POST["password"];
+    }
+    
     include 'conexion_be.php';
 
-    $nombre_completo = $_POST['nombre_completo'];
-    $correo = $_POST['correo'];
-    $usuario = $_POST['usuario'];
-    $contrasena = $_POST['contrasena'];
-    $contrasena = hash('sha512', $contrasena);
+    $nombre_completo = $_POST['add_nombre'];
+    $correo = $_POST['add_email'];
+    $usuario = $_POST['add_usuario'];
+    $contrasena = $_POST['password'];
 
-    $query = "INSERT INTO usuarios(nombre_completo, correo, usuario, contrasena)
+    $query = "INSERT INTO usuarios(nombre_completo, email, usuario, password)
               VALUES('$nombre_completo', '$correo', '$usuario', '$contrasena')";
 
 
-    $verificar_correo = mysqli_query($conexion, "SELECT * FROM usuarios WHERE correo='$correo' ");
+    $verificar_correo = mysqli_query($conexion, "SELECT * FROM usuarios WHERE email='$correo' ");
 
     if(mysqli_num_rows($verificar_correo) > 0){
         echo '
             <script>
                 alert("Este correo ya existe, utiliza otro");
-                window.location = "../index.php";
+                window.location = "../login.php";
             </script>
         ';
         exit();
@@ -30,7 +39,7 @@
         echo '
             <script>
                 alert("Este usuario ya existe, utiliza otro");
-                window.location = "../index.php";
+                window.location = "../login.php";
             </script>
         ';
         exit();
@@ -42,14 +51,14 @@
         echo '
             <script>
                 alert("Usuario Almacenado exitosamente");
-                window.location = "../index.php";
+                window.location = "../login.php";
             </script>
         ';
     }else{
         echo '
             <script>
             alert("Usuario no almacenado");
-            window.location = "../index.php";
+            window.location = "../login.php";
             </script>
         '; 
     }

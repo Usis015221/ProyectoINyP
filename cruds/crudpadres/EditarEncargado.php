@@ -13,8 +13,8 @@ $correo = $_POST["correoE"];
 $usuario = $_POST["usuarioE"];
 $edad = $_POST["edadE"];
 $rol = $_POST["rolE"];
-$telefono = $_POST["TelefonoE"];
-$dui = $_POSt["DUIE"];
+$telefono = $_POST["telefonoE"];
+$dui = $_POST["duiE"];
 $foto = addslashes(file_get_contents($_FILES['foto_encargado']['tmp_name']));
 
 
@@ -26,7 +26,7 @@ correo = '$correo',
 usuario = '$usuario',
 edad = '$edad',
 rol = '$rol',
-telefono = '$encargado',
+telefono = '$telefono',
 dui = '$dui',
 foto_encargado = '$foto' WHERE Id = $Id";
 
