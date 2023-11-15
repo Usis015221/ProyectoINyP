@@ -95,8 +95,8 @@
                                     Lenguaje
                                   </a>
                                   <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="juegos/matematicas/suma.php">Sumas</a></li>
-                              <li><a class="dropdown-item" href="juegos/matematicas/resta.php">Restas</a></li>
+                              <li><a class="dropdown-item" href="juegos/lenguaje/letras/letras.php">Sopa de letras</a></li>
+                              <li><a class="dropdown-item" href="juegos/lenguaje/pasapalabra/pasapalabra.php">Pasa la Palabra</a></li>
                                   </ul>
                               </li>
                               <li class="nav-item dropdown">
@@ -123,7 +123,7 @@
                                   </a>
                                   <ul class="dropdown-menu">
                               <li><a class="dropdown-item" href="juegos/artistica/paint/paint.php">Dibuja</a></li>
-                              <li><a class="dropdown-item" href="juegos/matematicas/resta.php">Restas</a></li>
+                              <li><a class="dropdown-item" href="juegos/artistica/juego/juego.php">Piedra, papel o tijeras</a></li>
                                   </ul>
                               </li>
                               <li class="nav-item d_none login_btn">
@@ -202,7 +202,7 @@
             </div>
         </div>
         <a href="cruds/crudestudiante/chat/index.php">
-        <button id="floating-button"><i class="fas fa-envelope"></i></button>
+        <button id="floating-button"><em class="fas fa-envelope"></em></button>
         </a>
     </footer>
     <script src="js/jquery.min.js"></script>

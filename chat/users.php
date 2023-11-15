@@ -29,7 +29,7 @@ if (!isset($_SESSION['unique_id'])) {
       <div class="search">
         <span class="text">Selecciona un chat para iniciar una conversación</span>
         <input type="text" placeholder="Enter name to search...">
-        <button><i class="fas fa-search"></i></button>
+        <button><em class="fas fa-search"></em></button>
       </div>
       <div class="users-list">
 

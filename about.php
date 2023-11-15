@@ -202,7 +202,7 @@
          </div>
           <a href="chat/index.php">
          <!-- Agrega el ícono de mensaje al botón utilizando la clase de FontAwesome -->
-        <button id="floating-button"><i class="fas fa-envelope"></i></button>
+        <button id="floating-button"><em class="fas fa-envelope"></em></button>
         </a>
         <a href="chatbot/index.php">
         <!-- Agrega el ícono de mensaje al botón utilizando la clase de FontAwesome -->

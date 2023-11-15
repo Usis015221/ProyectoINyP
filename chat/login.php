@@ -20,7 +20,7 @@ if (isset($_SESSION['unique_id'])) {
         <div class="field input">
           <label>Contraseña</label>
           <input type="password" name="password" placeholder="Ingresa tu Contraseña" required>
-          <i class="fas fa-eye"></i>
+          <em class="fas fa-eye"></em>
         </div>
         <div class="field button">
           <input type="submit" name="submit" value="Chatear">

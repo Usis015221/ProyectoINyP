@@ -30,7 +30,7 @@ if (isset($_SESSION['unique_id'])) {
         <div class="field input">
           <label>Contraseña</label>
           <input type="password" name="password" placeholder="Ingresa tu contraseña" required>
-          <i class="fas fa-eye"></i>
+          <em class="fas fa-eye"></em>
         </div>
         <div class="field image">
           <label>Tu Avatar</label>
