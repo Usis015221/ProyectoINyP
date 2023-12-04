@@ -1,21 +1,3 @@
-<?php
-
-    session_start();
-
-    if(!isset($_SESSION['usuario'])){
-        echo '
-            <script>
-                alert("Por favor inicia sesión");
-                window.location = "index.php";
-            </script>
-        ';
-        session_destroy();
-        die();
-    }
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,10 +21,28 @@
       font-family: Arial, sans-serif;
       }
   
-      #floating-button {
+  #floating-button, #floating {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          background-color: #007BFF;
+          color: white;
+          border: none;
+          border-radius: 50%;
+          width: 50px;
+          height: 50px;
+          font-size: 20px;
+          text-align: center;
+          cursor: pointer;
+          box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+          /* Alinea el ícono verticalmente */
+          line-height: 50px;
+      }
+
+      #floating {
       position: fixed;
       bottom: 20px;
-      right: 20px;
+      right: 80px; /* Ajusta la posición del segundo botón */
       background-color: #007BFF;
       color: white;
       border: none;
@@ -55,7 +55,10 @@
       box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
       /* Alinea el ícono verticalmente */
       line-height: 50px;
-      }
+      /* Utiliza tu imagen personalizada como fondo */
+      background-image: url('images/perfil.png');
+      background-size: cover; /* Ajusta el tamaño de la imagen */
+  }
       </style>
   </head>
 <body>    
@@ -96,7 +99,7 @@
                                   </a>
                                   <ul class="dropdown-menu">
                               <li><a class="dropdown-item" href="juegos/lenguaje/letras/letras.php">Sopa de letras</a></li>
-                              <li><a class="dropdown-item" href="juegos/lenguaje/pasapalabra/pasapalabra.php">Pasa la Palabra</a></li>
+                              <li><a class="dropdown-item" href="juegos/lenguaje/cuentos/cuentos.html">Cuentos</a></li>
                                   </ul>
                               </li>
                               <li class="nav-item dropdown">
@@ -113,7 +116,7 @@
                                     Ciencias
                                   </a>
                                   <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="juegos/matematicas/suma.php">Sumas</a></li>
+                              <li><a class="dropdown-item" href="juegos/ciencias/pasapalabra/pasapalabra.php">Pasa la Palabra</a></li>
                               <li><a class="dropdown-item" href="juegos/matematicas/resta.php">Restas</a></li>
                                   </ul>
                               </li>
@@ -125,9 +128,6 @@
                               <li><a class="dropdown-item" href="juegos/artistica/paint/paint.php">Dibuja</a></li>
                               <li><a class="dropdown-item" href="juegos/artistica/juego/juego.php">Piedra, papel o tijeras</a></li>
                                   </ul>
-                              </li>
-                              <li class="nav-item d_none login_btn">
-                                 <a class="nav-link" href="php/cerrar_sesion.php">Cerrar Sesión</a>
                               </li>
                            </ul>
                         </div>
@@ -203,6 +203,10 @@
         </div>
         <a href="cruds/crudestudiante/chat/index.php">
         <button id="floating-button"><em class="fas fa-envelope"></em></button>
+        </a>
+        <a href="chatbot/index.php">
+        <!-- Agrega el ícono de mensaje al botón utilizando la clase de FontAwesome -->
+        <button id="floating"></i></button>
         </a>
     </footer>
     <script src="js/jquery.min.js"></script>

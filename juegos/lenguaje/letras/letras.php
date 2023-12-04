@@ -1,18 +1,4 @@
-﻿<?php
-session_start();
-
-if (!isset($_SESSION['usuario'])) {
-    echo '
-        <script>
-            alert("Por favor inicia sesión");
-            window.location = "../../index.php";
-        </script>
-    ';
-    session_destroy();
-    die();
-}
-?>
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
   <title>Sopa de letras</title>
@@ -21,7 +7,7 @@ if (!isset($_SESSION['usuario'])) {
 <link rel="stylesheet" href="bootstrap.min.css" >
 <link rel="stylesheet" type="text/css" href="jquery-ui.css">
 <link href="jquery.tagit.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="images/estiloscruds.css">
+<link rel="stylesheet" href="css/estiloscruds.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
 
@@ -125,7 +111,7 @@ if (!isset($_SESSION['usuario'])) {
 <button onclick="regresarAlInicio()" class="btn btn-info btn-lg ">Regresar al Inicio</button>
     <script>
         function regresarAlInicio() {
-            window.location = "../../../bienvenida.php";
+            window.location = "../../../index.php";
         }
     </script>
     

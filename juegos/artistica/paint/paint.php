@@ -1,22 +1,3 @@
-<?php
-
-    session_start();
-
-    if(!isset($_SESSION['usuario'])){
-        echo '
-            <script>
-                alert("Por favor inicia sesión");
-                window.location = "index.php";
-            </script>
-        ';
-        session_destroy();
-        die();
-    }
-
-
-?>
-<!DOCTYPE html>
-
 <html lang="en">
 
 <head>
@@ -68,7 +49,7 @@
 
 
                     </a>
-                    <a href="../../../bienvenida.php">
+                    <a href="../../../index.php">
                         <button style="font-size:24px;" id="draw">Volver al inicio<i class="fa fa-paint-brush"></i></button>
 
 

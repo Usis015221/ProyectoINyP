@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasa Palabra</title>
+    <link rel="stylesheet" href="css/estilo.css">
+
+    <style>
+        /* Estilos para el cuadro de texto */
+        
+        .info-box {
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            top: 50px;
+            /* Ajusta la posición vertical según tus necesidades */
+            right: 10px;
+            max-width: 390px;
+            /* Puedes ajustar el ancho máximo según tu preferencia */
+            font-size: 16px;
+        }
+        
+        .info-box p {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="info-box">
+        <p>¡Instrucciones!</p>
+        <p>Para jugar debes tener los conocimientos acerca del sistema solar.</p>
+        <p>Como puedes observar hay 2 botones, el que dice "COMENZAR EL JUEGO" es para iniciar y el otro te regresa al menu principal.</p>
+        <p>Si le das clic al boton para comenzar el juego, te cargara un circulo y dentro de el estara un contador de tiempo de 120 segundos que equivalen a 2 minutos, al rededor están los literales de cada pregunta.</p>
+        <p>Debajo del circulo, te aparecera la pregunta o enunciado al cual debes responder.</p>
+        <p>Luego abajo tienes un apartado para escribir la respuesta con tu teclado.</p>
+        <p>Cuando hallas respondido puedes darle a la tecla ENTER en tu teclado o darle al boton que se encuentra abajo que dice Responder.</p>
+        <p>Si respondiste correctamente el literal de la pregunta que se encuentra al rededor del circulo se pondra de color verde y si la respuesta es incorrecta el literal se pondra rojo.</p>
+        <p>Si no sabes la respuesta, puedes omitir la pregunta para responderla despues dando clic al boton que dice Pasa Palabra.</p>
+        <p>Al finalizar el juego te saldra el porcentaje de acierto que tuviste en el juego y debajo te apareceran dos botones uno es para reiniciar el juego y el otro te regresa al menu principal.</p>
+    </div>
+    <section id="pantalla-inicial">
+        <h1>PASAPALABRA</h1>
+        <button id="comenzar">COMENZAR JUEGO</button>
+
+        <button onclick="regresarAlInicio()">Regresar al Inicio</button>
+    </section>
+    <script>
+        function regresarAlInicio() {
+            window.location = "../../../index.php";
+        }
+    </script>
+    </section>
+    <section id="pantalla-juego">
+        <div class="container">
+            <span id="tiempo">120</span>
+        </div>
+
+        <div class="contendor-pregunta">
+            <span id="letra-pregunta">Z</span>
+            <h2 id="pregunta">Pregunta...</h2>
+            <input type="text" id="respuesta">
+            <div class="botones">
+                <button id="responder">Responder</button>
+                <button id="pasar">Pasa Palabra</button>
+            </div>
+        </div>
+    </section>
+    <section id="pantalla-final">
+        <h1>Resumen</h1>
+        <h3>Acertadas</h3>
+        <span id="acertadas">
+            10
+        </span>
+        <h3 id="score">40% de acierto</h3>
+        <button id="recomenzar">Jugar de Nuevo</button>
+
+        <button onclick="regresarAlInicio()">Regresar al Inicio</button>
+    </section>
+    <script>
+        function regresarAlInicio() {
+            window.location = "../../../index.php";
+        }
+    </script>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
