@@ -26,18 +26,42 @@
         .info-box p {
             margin: 0;
         }
+        
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 500px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      padding: 12px;
+      z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
     </style>
 </head>
 <body>
-    <div class="info-box">
-        <p>¡Instrucciones!</p>
-        <p>Este es el mitico juego de piedra, papel o tijeras.</p>
-        <p>Como puedes observar tienes las 3 opciones de juego representados en señas de manos, papel, piedra y tijeras en ese orden.</p>
-        <p>Este juego lo jugaras tu contra la computadora, puedes dar clic sobre las opciones y escoger cualquiera, la computadora tambien podra escoger cualquiera.</p>
-        <p>Si tu escogiste la opcion ganadora te aparecera un mensaje que dice Ganaste.</p>
-        <p>Si la computadora y tu eligen la misma opción te mostrara un mensaje que dice La partida es un empate.</p>
-        <p>Si elegiste la opcion equivocada la computadora te ganara y te aparecera un mensaje que dice Perdiste :(</p>
-        <p>Al final tendras un boton que te permitira volver al menu principal.</p> </div>
+<div class="dropdown">
+  <p>¡Instrucciones!</p>
+  <div class="dropdown-content">
+    <p>Este es el mitico juego de piedra, papel o tijeras.</p>
+    <p>Como puedes observar tienes las 3 opciones de juego representados en señas de manos, papel, piedra y tijeras en ese orden.</p>
+    <p>Este juego lo jugaras tu contra la computadora, puedes dar clic sobre las opciones y escoger cualquiera, la computadora tambien podra escoger cualquiera.</p>
+    <p>Si tu escogiste la opcion ganadora te aparecera un mensaje que dice Ganaste.</p>
+    <p>Si la computadora y tu eligen la misma opción te mostrara un mensaje que dice La partida es un empate.</p>
+    <p>Si elegiste la opcion equivocada la computadora te ganara y te aparecera un mensaje que dice Perdiste :(</p>
+    <p>Al final tendras un boton que te permitira volver al menu principal.</p>
+  </div>
+</div>
+</div>
 	<style>
 		         button {
             cursor: pointer;

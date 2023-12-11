@@ -18,17 +18,23 @@
         }
         /* Estilos para el cuadro de texto */
         
+        .dropdown-container {
+            position: fixed;
+            top: 125px;
+            right: 10px;
+        }
+        
+        .dropdown-trigger:hover .info-box {
+            display: block;
+        }
+        
         .info-box {
+            display: none;
             background-color: #f4f4f4;
             border-radius: 10px;
             padding: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            position: fixed;
-            top: 125px;
-            /* Ajusta la posición vertical según tus necesidades */
-            right: 10px;
             max-width: 460px;
-            /* Puedes ajustar el ancho máximo según tu preferencia */
             font-size: 15px;
         }
         
@@ -38,7 +44,6 @@
         
         h1 {
             margin-top: 50px;
-            /* Ajusta el margen superior para evitar solapamiento con la info-box */
         }
         
         button {
@@ -57,25 +62,29 @@
 </head>
 
 <body>
-    <div class="info-box">
-        <p>¡Instrucciones!</p>
-        <p>Para jugar debe haber leído previamente el cuento mencionado.</p>
-        <p>Como puedes observar en el párrafo hay unos espacios vacíos.</p>
-        <p>Estos espacios vacíos los llenarás con las palabras que aparecen abajo.</p>
-        <p>Deberás dar clic en las palabras de abajo para poderlas ir colocando</p>
-        <p>en el orden correcto.</p>
-        <p>Cuando hallas colocado todas las palabras en los espacios vacíos, debes</p>
-        <p>darle clic al botón que dice comprobar.</p>
-        <p>Si colocaste las palabras correctamente, en pantalla se te mostrara un</p>
-        <p>mensaje que dice EXCELENTE.</p>
-        <p>Pero si te equivocaste te saldrá un mensaje que dice existen errores</p>
-        <p>y te marcara en color verde las que colocaste correctamente y en color</p>
-        <p>rojo las que están mal.</p>
-        <p>Si te equivocaste puedes dar clic sobre las palabras para quitarlas del parrafo</p>
-        <p>y volver a colocarlas correctamente.</p>
-        <p></p>
+    <div class="dropdown-container">
+        <div class="dropdown-trigger">¡Instrucciones!
+            <div class="info-box" id="instructions">
+                <p>Para jugar debe haber leído previamente el cuento mencionado.</p>
+                <p>Como puedes observar en el párrafo hay unos espacios vacíos.</p>
+                <p>Estos espacios vacíos los llenarás con las palabras que aparecen abajo.</p>
+                <p>Deberás dar clic en las palabras de abajo para poderlas ir colocando</p>
+                <p>en el orden correcto.</p>
+                <p>Cuando hallas colocado todas las palabras en los espacios vacíos, debes</p>
+                <p>darle clic al botón que dice comprobar.</p>
+                <p>Si colocaste las palabras correctamente, en pantalla se te mostrara un</p>
+                <p>mensaje que dice EXCELENTE.</p>
+                <p>Pero si te equivocaste te saldrá un mensaje que dice existen errores</p>
+                <p>y te marcara en color verde las que colocaste correctamente y en color</p>
+                <p>rojo las que están mal.</p>
+                <p>Si te equivocaste puedes dar clic sobre las palabras para quitarlas del parrafo</p>
+                <p>y volver a colocarlas correctamente.</p>
+                <p></p>
+            </div>
+        </div>
     </div>
-    <h1>Completa el parrafo tomado del cuento "El bosque de la Armonía: Lecciones de Invierno".</h1>
+
+    <h1>Completa el párrafo tomado del cuento "El bosque de la Armonía: Lecciones de Invierno".</h1>
     <section class="texto">
         <p>Había una vez en un bosque muy <span id="0"></span> un grupo de animales que vivían juntos en <span id="1"></span> Cada uno de ellos tenía habilidades <span id="2"></span> y diferentes personalidades. Había un astuto zorro llamado <span id="3"></span>            una sabia lechuza llamada Luna, un diligente <span id="4"></span> llamado Saltarín y una valiente <span id="5"></span> llamada <span id="6"></span>.</p>
     </section>
@@ -89,7 +98,7 @@
     <br>
     <br>
     <button onclick="regresarAlInicio()">Regresar al Inicio</button>
-    </section>
+
     <script>
         function regresarAlInicio() {
             window.location = "../../../index.php";

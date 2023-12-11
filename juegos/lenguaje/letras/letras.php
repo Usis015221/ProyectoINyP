@@ -91,6 +91,16 @@
          </div>
         
         
+         <div class="dropdown">
+            <p class="dropdown-btn">3.- Como jugar?</p>
+            <div class="dropdown-content">
+                <p>A la izquierda de la sopa de letras puedes observar las palabras que debes encontrar.</p>
+                <p>En la sopa de letras las palabras a buscar se ubicaran de derecha a izquierda, de izquierda a derecha, de abajo hacia arriba, de arriba hacia abajo y en diagonales.</p>
+                <p>Cuando encuentres la palabra debes dar clic sobre la primer letra y luego mantener el clic y mover con el mouse sobre las demas letras hasta formar la palabra.</p>
+                <p>La palabra mientras la seleccionas se pondra de color amarillo y cuando la completes se pondra de color azul indicando que la encontraste.</p>
+                <p>Cuando ya hallas terminado de jugar y quieras volver al inicio, abajo tienes un boton para que puedas volver al inicio.</p>
+            </div>
+        </div>
 
         
 

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Adivina la palabra</title>
+
+    <style>
+        body {
+            background-image: url(img/fondooo.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        /* Estilos para el cuadro de texto */
+        
+        .dropdown-container {
+            position: fixed;
+            top: 125px;
+            right: 10px;
+        }
+        
+        .dropdown-trigger:hover .info-box {
+            display: block;
+        }
+        
+        .info-box {
+            display: none;
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            max-width: 460px;
+            font-size: 15px;
+        }
+        
+        .info-box p {
+            margin: 0;
+        }
+        
+        h1 {
+            margin-top: 50px;
+        }
+        
+        button {
+            cursor: pointer;
+            background: linear-gradient( #07789b);
+            padding: 20px;
+            border-radius: 50px;
+            border: white 5px solid;
+            font-size: 130%;
+        }
+        
+        button:hover {
+            background-color: #68e8c2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dropdown-container">
+        <div class="dropdown-trigger">¡Instrucciones!
+            <div class="info-box" id="instructions">
+                <p>Para jugar debes saber algunas caracteristicas del tema Animales.</p>
+                <p>Se te mostraran unos cuadros donde deben ir las letras del animal que debes adivinar.</p>
+                <p>Hay un apartado que dice "Ayuda" ahi estara la pista que te ayudara a que adivines el animal.</p>
+                <p>Tendras un limite de 5 intentos.</p>
+                <p>Luego en el teclado de tu computadora debes pulsar las letras que formen el nombre del animal y estas letras se colocaran en los cuadros mencionados anteriormente.</p>
+                <p>Si resolviste la palabra y quieres jugar otra vez, puedes dar clic al boton que dice "Nueva palabra".</p>
+                <p>Tambien tendras un boton para poder volver al inicio.</p>
+            </div>
+        </div>
+    </div>
+    <section>
+        <h2>Adivina la Palabra</h2>
+        <div id="palabra">
+            <div class="letra pintar">G</div>
+            <div class="letra">U</div>
+            <div class="letra">I</div>
+            <div class="letra">T</div>
+            <div class="letra">A</div>
+            <div class="letra">R</div>
+            <div class="letra">R</div>
+            <div class="letra">A</div>
+        </div>
+        <h3>Ayuda: <span id="ayuda"> Instrumento Musical</span> </h3>
+        <h3>Intentos restantes: <span id="intentos">5</span></h3>
+        <h3>Letras ingresadas: <span id="letrasIngresadas"></span></h3>
+
+        <button onclick="cargarNuevaPalabra()">Nueva Palabra</button>
+        <button onclick="regresarAlInicio()">Regresar al Inicio</button>
+    </section>
+    <script>
+        function regresarAlInicio() {
+            window.location = "../../../index.php";
+        }
+    </script>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -107,7 +107,7 @@
                                   </a>
                                   <ul class="dropdown-menu">
                               <li><a class="dropdown-item" href="juegos/matematicas/suma.php">Sumas</a></li>
-                              <li><a class="dropdown-item" href="juegos/matematicas/resta.php">Restas</a></li>
+                              <li><a class="dropdown-item" href="juegos/matematicas/restas/resta.html">Restas</a></li>
                                   </ul>
                               </li>
                               <li class="nav-item dropdown">
@@ -116,7 +116,7 @@
                                   </a>
                                   <ul class="dropdown-menu">
                               <li><a class="dropdown-item" href="juegos/lenguaje/letras/letras.php">Sopa de letras</a></li>
-                              <li><a class="dropdown-item" href="juegos/lenguaje/cuentos/cuentos.html">Cuentos</a></li>
+                              <li><a class="dropdown-item" href="juegos/lenguaje/cuentos/cuentos.html">Completa el texto</a></li>
                                   </ul>
                               </li>
                               <li class="nav-item dropdown">
@@ -134,7 +134,7 @@
                                   </a>
                                   <ul class="dropdown-menu">
                               <li><a class="dropdown-item" href="juegos/ciencias/juego/index.html">Pasa la Palabra</a></li>
-                              <li><a class="dropdown-item" href="juegos/matematicas/resta.php">Restas</a></li>
+                              <li><a class="dropdown-item" href="juegos/ciencias/animales/animales.html">Adivina la palabra</a></li>
                                   </ul>
                               </li>
                               <li class="nav-item dropdown">

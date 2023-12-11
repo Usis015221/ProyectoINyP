@@ -6,10 +6,63 @@
     <title>Memorama</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background-image: url(img/fondooo.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        /* Estilos para el cuadro de texto */
+        
+        .dropdown-container {
+            position: fixed;
+            top: 125px;
+            right: 10px;
+        }
+        
+        .dropdown-trigger:hover .info-box {
+            display: block;
+        }
+        
+        .info-box {
+            display: none;
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            max-width: 460px;
+            font-size: 15px;
+        }
+        
+        .info-box p {
+            margin: 0;
+        }
+        
+        h1 {
+            margin-top: 50px;
+        }
+        
+        button {
+            cursor: pointer;
+            background: linear-gradient( #07789b);
+            padding: 20px;
+            border-radius: 50px;
+            border: white 5px solid;
+            font-size: 130%;
+        }
+        
+        button:hover {
+            background-color: #68e8c2;
+        }
+    </style>
 </head>
 
 <body>
 <h1>MEMORIZANDO LOS SÍMBOLOS PATRIOS DE EL SALVADOR</h1>
+
     <style>
          :root {
             --w: calc(70vw / 6);
@@ -111,6 +164,19 @@
 
     <br>
 
+    <div class="dropdown-container">
+        <div class="dropdown-trigger">¡Instrucciones!
+            <div class="info-box" id="instructions">
+                <p>Para jugar debes haber leído acerca de los simbolos patrios de nuestro país.</p>
+                <p>Al inicio de cada partida se te muestran todas las caras de las cartas y luego de unos segundos las cartas se voltean y esconden su cara..</p>
+                <p>El juego consiste en encontrar el par de cartas.</p>
+                <p>Para encontrarlas debes haber memorizado las cartas cuando estas mostraban su cara.</p>
+                <p>Dando clic sobre las cartas estas se mostraran y si ambas cartas coinciden se quedaran mostradas, pero si no coinciden ambas cartas se quedaran escondidas.</p>
+                <p>Cuando hallas encontrado todas las cartas, tendras un boton para reiniciar la partida y la posicion de las cartas cambiara.</p>
+                <p>Tambien tendras un boton para poder volver al inicio.</p>
+            </div>
+        </div>
+    </div>
     <div class="nuevo-juego" onclick="generarTablero()">
         Nuevo Juego
     </div>
